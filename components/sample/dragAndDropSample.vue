@@ -30,11 +30,9 @@
           :style="{ left: `${item.position.x}px`, top: `${item.position.y}px` }"
           @click="deleteItem(index)"
         >
-          {{ item.text }}
+          <SampleItem :item="item"/>
         </div>
       </div>
-      {{ draggedItem }}
-      {{ placedItems }}
     </div>
   </div>
 </template>
@@ -42,6 +40,7 @@
 <script setup>
 import { ref } from 'vue'
 import image from '@/assets/image/sample.png'
+import SampleItem from './sampleItem.vue'
 
 const items = ref([
   { id: 1, text: 'アイテム1' },
@@ -54,6 +53,7 @@ const draggedItem = ref(null)
 const handleDragStart = (e, item) => {
   draggedItem.value = item
   e.dataTransfer.setData('text/plain', item.id)
+  console.log(e)
   
   // ドラッグ中の見た目
   e.target.style.opacity = '0.5'
