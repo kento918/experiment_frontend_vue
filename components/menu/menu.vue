@@ -1,13 +1,9 @@
 <template>
-    <v-container>
-      <v-row>
-         test 
-      </v-row>
-    </v-container>
+  <v-container>
+    <v-row> test </v-row>
+  </v-container>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style scoped>
-</style>
+<style scoped></style>
