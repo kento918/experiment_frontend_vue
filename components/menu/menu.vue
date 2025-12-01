@@ -1,9 +1,16 @@
 <template>
-  <v-container>
-    <v-row> test </v-row>
-  </v-container>
+  <div v-for="item in items" :key="item.id">
+    {{ item.name }}
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+const items = [
+    { label: 'Home', link: '/' },
+  { label: 'About', link: '/about' }
+]
+
+
+</script>
 
 <style scoped></style>
