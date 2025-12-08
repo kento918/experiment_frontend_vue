@@ -27,34 +27,34 @@
 
 <style scoped>
 .admin-menu {
-  padding: 2rem;
-  font-family: Arial, sans-serif;
+   padding: 2rem;
+   font-family: Arial, sans-serif;
 }
 
 header h1 {
-  color: #333;
+   color: #333;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+   list-style-type: none;
+   padding: 0;
 }
 
 nav li {
-  margin: 1rem 0;
+   margin: 1rem 0;
 }
 
 button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #42b983;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+   padding: 0.5rem 1rem;
+   font-size: 1rem;
+   background-color: #42b983;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
 }
 
 button:hover {
-  background-color: #369c70;
+   background-color: #369c70;
 }
 </style>
