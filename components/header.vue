@@ -1,5 +1,5 @@
 <template>
-   <div class="h-28 bg-blue-600 flex justify-center contents-center">
+   <div class="h-28 bg-emerald-800 flex justify-center contents-center">
       <div class="title-font">kento tech blog</div>
    </div>
 </template>
@@ -16,5 +16,6 @@
       "wdth" 100,
       "CTRS" 0;
    font-size: 60px;
+   color: white;
 }
 </style>

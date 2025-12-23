@@ -1,46 +1,18 @@
 <template>
-   <div class="blog-top-page">
-      <section class="bg-gray-100 p-6 rounded-lg mb-8">
-         <div class="">
-            <h1 class="text-2xl font-bold">自己紹介</h1>
-            <p class="mt-4 text-gray-700">
-               ブログ運営者です。技術と創造の融合を通じて、日々の学びと挑戦を共有しています。
-               主にWeb開発、AI技術、およびデザイン思考について記事を公開しています。
-            </p>
-            <img
-               alt="プロフィール画像"
-               src="@/assets/image/profile.png"
-               class="w-20 h-20 rounded-full mt-6 mx-auto"
-            />
-         </div>
-      </section>
-   </div>
-   <!-- Latest Blogs Section -->
-
-   <section class="">
-      <div>
-         <div class="max-w-6xl mx-auto">
-            <h2>最新のブログ</h2>
-            <div class="blog-grid">
-               <div
-                  class="bg-white p-4 border border-gray-200 rounded-lg"
-                  v-for="(post, index) in latestPosts"
-                  :key="index"
-               >
-                  <h3>{{ post.title }}</h3>
-                  <p>{{ post.excerpt }}</p>
-                  <a href="#" @click.prevent="goToBlog(post.slug)"
-                     >続きを読む</a
-                  >
-               </div>
-            </div>
-         </div>
-         <div @click="goIDtest('this_is_new_test')">id test</div>
-      </div>
-   </section>
+   <creaateContentsList />
+   <profile />
+   <btn @click="createUser()"></btn>
 </template>
 
 <script setup>
+const createUser = () => {
+   const name: string = "kento"
+   const password: string = "1111"
+
+   const res = await fetch()
+   console.log(res)
+
+}
 const blogPosts = ref([
    {
       title: "Vue.jsのベストプラクティス",
@@ -64,7 +36,7 @@ const blogPosts = ref([
 
 const goIDtest = (test) => {
    const router = useRouter();
-    router.push(`/contents/${test}`);
+   router.push(`/contents/${test}`);
 };
 
 const latestPosts = computed(() => blogPosts.value.slice(0, 3));
