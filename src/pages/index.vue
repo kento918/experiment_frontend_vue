@@ -1,18 +1,19 @@
 <template>
-   <creaateContentsList />
+   <newContentsList />
    <profile />
-   <btn @click="createUser()"></btn>
+   <button @click="createUser()">createuse</button>
 </template>
 
-<script setup>
-const createUser = () => {
-   const name: string = "kento"
-   const password: string = "1111"
+<script setup lang="ts">
+import { PostUserRequest } from "@/types/request/user";
+import { postRequest } from "@/composables/api";
 
-   const res = await fetch()
-   console.log(res)
-
-}
+const createUser = async () => {
+   const name: string = "kento";
+   const password: string = "1111";
+   const res = await postRequest("user", { name, password });
+   console.log(res);
+};
 const blogPosts = ref([
    {
       title: "Vue.jsのベストプラクティス",
@@ -33,11 +34,6 @@ const blogPosts = ref([
       slug: "design-thinking-basics",
    },
 ]);
-
-const goIDtest = (test) => {
-   const router = useRouter();
-   router.push(`/contents/${test}`);
-};
 
 const latestPosts = computed(() => blogPosts.value.slice(0, 3));
 

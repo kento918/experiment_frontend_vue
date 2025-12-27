@@ -1,10 +1,10 @@
 // frontend/tsconfig.json
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["../*"],
-      "@/*": ["../*"]
-    }
-  }
+   "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+         "@/*": ["./src/*"],
+         "@api-contract/*": ["./api-contract/*"],
+      },
+   },
 }
